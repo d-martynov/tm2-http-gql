@@ -1,0 +1,8 @@
+[app]
+authPublicKey="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAghA+3ue1H98ZPGJAf66k7iUehmEKv+ON8na+Up7q8xBeM2HmsevjteWttyHmniQG3JMCBY5ysY97e3RJB+MlLf3xTV14pcWw6wLNASbm0av+NxcVCHcmP8oKiv7Hgb934ZBNg6XwesHlwbLwH+4ppOss8tDZYS2X5TAirLjdgj/Do2CfPGW11I4q7e5eK/44ILT6OjQNv9h947WFhcSentZVJi+Kg5xVyvB9D7P+eWvJbkyO6nmyWB9s9k/MlkYpd9fz8+IV3asnCma8/jIvkIJjX8mpm0+zA8lVObS76sJ3eunxi2z/mBZXFJkBQZVeNjkVhT8P/7QGkFPOTDY0DwIDAQAB"
+
+[rabbitmq]
+uri = "amqp://rabbitmq:Q1w2e3r4@rabbitmq:5672"
+queue = "tm2-api"
+consumerName = "TM2HttpGql"
+responseExchange = "tm2.topic"

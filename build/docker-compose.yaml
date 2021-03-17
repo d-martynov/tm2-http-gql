@@ -1,0 +1,7 @@
+version: '3'
+services:
+  tm2-bc-gw:
+    image: tm2.spellsystems.com/tm2-http-gql:${BRANCH-test}
+    build:
+      context: ..
+      dockerfile: ./build/Dockerfile
