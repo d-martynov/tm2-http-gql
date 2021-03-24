@@ -22,10 +22,11 @@ type httpGqlService struct {
 }
 
 type graphqlResponse struct {
+	Type    string
 	Success bool
 	Data    json.RawMessage
 	Errors  []struct {
-		Message json.RawMessage
+		Message string
 	}
 }
 
@@ -115,7 +116,7 @@ func (s httpGqlService) onGqlRequestReceived(response http.ResponseWriter, reque
 				_, err = response.Write(result)
 			} else {
 				errorsResponse := graphqlResponse{
-					Errors: []struct{ Message json.RawMessage }{{Message: responseStruct.Data}},
+					Errors: []struct{ Message string }{{Message: string(result)}},
 				}
 
 				errorResponse, _ := json.Marshal(errorsResponse)
